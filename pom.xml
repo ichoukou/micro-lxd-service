@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>
 	<modules>
 	
-		<module>eureka-sever</module>
+		<module>eureka-server</module>
 	
 		<module>config-server</module>
 		
