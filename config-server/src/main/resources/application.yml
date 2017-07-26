@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/lxdd/micro-service.git  # 配置git仓库的地址
+          uri: https://github.com/lxdd/micro-lxd-service.git  # 配置git仓库的地址
           username: lxdd # git仓库的账号
           password: lxd870701 # git仓库的密码
           search-paths:
