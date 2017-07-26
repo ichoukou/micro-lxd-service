@@ -1,0 +1,28 @@
+server:
+    port: 8888
+    
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lxdd/micro-service.git  # 配置git仓库的地址
+          username: lxdd # git仓库的账号
+          password: lxd870701 # git仓库的密码
+          search-paths:
+          - /config-center
+#          search-paths: /config-center
+#          - dev*,test*    # git仓库地址下的相对地址，可以配置多个，用,分割。
+#  profiles:
+#    active:
+#    - native  #提供本地存储配置
+
+#
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7070/eureka/   ## 注册中心eurka地址
+
+

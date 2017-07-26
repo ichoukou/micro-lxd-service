@@ -1,0 +1,4 @@
+from: local
+my-config:
+  appName: my-app-local
+  debugMode: true

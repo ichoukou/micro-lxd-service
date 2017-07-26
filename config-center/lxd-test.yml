@@ -1,0 +1,4 @@
+from: local-test
+my-config:
+  appName: my-app-test
+  debugMode: true

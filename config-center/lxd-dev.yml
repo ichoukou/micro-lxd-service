@@ -1,0 +1,4 @@
+from: local-dev-git
+my-config:
+  appName: my-app-dev-git-new3
+  debugMode: true z

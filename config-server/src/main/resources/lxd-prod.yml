@@ -1,0 +1,4 @@
+from: local-prod
+my-config:
+  appName: my-app-prod
+  debugMode: true
