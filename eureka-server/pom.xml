@@ -6,7 +6,7 @@
 		<artifactId>micro-lxd-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>eureka-sever</artifactId>
+	<artifactId>eureka-server</artifactId>
 	<packaging>jar</packaging>
 
 
