@@ -12,6 +12,11 @@
 	
 		<module>config-server</module>
 		
+		<!-- 服务端1 -->
+		<module>service-producer</module>
+		
+		<!-- 服务端1 -->
+		<module>service-consumer</module>
 		
 	</modules>
 
@@ -19,13 +24,13 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Dalston.SR1</spring-cloud.version>
+		<spring-cloud.version>Dalston.SR2</spring-cloud.version>
 	</properties>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.4.RELEASE</version>
+		<version>1.5.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
