@@ -1,4 +1,4 @@
-package com.neo;
+package com.lxd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

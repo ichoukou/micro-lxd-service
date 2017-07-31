@@ -16,5 +16,7 @@ public class ConsumerController {
     public String index(@PathVariable("name") String name) {
         return HelloRemote.hello(name);
     }
+    
+    
 
 }
