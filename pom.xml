@@ -15,9 +15,13 @@
 		<!-- 服务端1 -->
 		<module>service-producer</module>
 		
-		<!-- 服务端1 -->
+		<!-- 消费端1 -->
 		<module>service-consumer</module>
 		
+		<!-- hystrix-dashboard -->
+		<module>hystrix-dashboard</module>
+
+		<module>turbine</module>
 	</modules>
 
 	<properties>
