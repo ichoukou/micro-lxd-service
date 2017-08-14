@@ -1,5 +1,5 @@
 server:
-    port: 8888
+    port: 7200
     
 spring:
   application:
@@ -23,6 +23,6 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7070/eureka/   ## 注册中心eurka地址
+      defaultZone: http://localhost:7100/eureka/   ## 注册中心eurka地址
 
 

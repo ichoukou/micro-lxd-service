@@ -2,7 +2,7 @@ spring:
   application:
     name: turbine
 server:
-  port: 8002
+  port: 7400
   
 #security:
 #  basic:
@@ -16,7 +16,7 @@ turbine:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:7070/eureka/
+      defaultZone: http://localhost:7100/eureka/
       
 
 

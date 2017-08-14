@@ -7,21 +7,29 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-	
+
+		<!-- 服务治理中心 7100 -->
 		<module>eureka-server</module>
-	
+
+		<!-- 配置中心 7200 -->
 		<module>config-server</module>
-		
-		<!-- 服务端1 -->
-		<module>service-producer</module>
-		
-		<!-- 消费端1 -->
-		<module>service-consumer</module>
-		
-		<!-- hystrix-dashboard -->
+
+		<!-- hystrix-dashboard 7300 -->
 		<module>hystrix-dashboard</module>
 
+		<!-- turbine 7400 -->
 		<module>turbine</module>
+
+		<!-- 房Web lovehome 8100 -->
+		<module>web-lovehome</module>
+
+		<!-- 房源服务 housing 8200 -->
+		<module>service-housing</module>
+
+		<!-- 客源服务 customer 8300 -->
+		<module>service-customer</module>
+
+
 	</modules>
 
 	<properties>
@@ -34,7 +42,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.5.RELEASE</version>
+		<version>1.5.6.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 

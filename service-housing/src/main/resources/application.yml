@@ -3,11 +3,11 @@ spring:
     name: service-housing
     
 server:
-  port: 9000
+  port: 8200
   
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7070/eureka/  
+      defaultZone: http://localhost:7100/eureka/  
 
 
