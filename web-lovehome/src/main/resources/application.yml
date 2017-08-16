@@ -1,7 +1,13 @@
 spring:
   application:
     name: web-lovehome
-    
+  thymeleaf:
+#    prefix: classpath:/templates/ #配置在使用Thymeleaf做页面模板时的前缀，即页面所在路径
+#    suffix: .html #设置在使用Thymeleaf做页面模板时的后缀
+    encoding: UTF-8
+    cache: false #设置在使用Thymeleaf做页面模板时是否启用缓存
+
+      
 server:
   port: 8100
   
