@@ -1,15 +1,12 @@
 package com.lxd.housing.dao;
 
+import org.apache.ibatis.annotations.Mapper;
+
+import com.lxd.core.dao.IDao;
 import com.lxd.housing.model.Housing;
 
-public interface HousingMapper {
+@Mapper
+public interface HousingMapper extends IDao<Housing>{
 	
-	Housing getById(Integer housingId);
-
-	int insert(Housing record);
-	
-	int update(Housing record);
-	
-	int deleteById(Integer housingId);
 
 }

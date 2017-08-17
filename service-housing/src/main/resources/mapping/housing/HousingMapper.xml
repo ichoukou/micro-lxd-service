@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lxd.housing.dao.housingMapper">
-	<resultMap id="BaseResultMap" type="com.lxd.housing.model.housing">
+<mapper namespace="com.lxd.housing.dao.HousingMapper">
+	<resultMap id="BaseResultMap" type="com.lxd.housing.model.Housing">
 		<id column="housing_id" property="housingId" jdbcType="INTEGER" />
 		<result column="housing_no" property="housingNo" jdbcType="VARCHAR" />
 		<result column="estate_name" property="estateName" jdbcType="VARCHAR" />
@@ -14,40 +14,73 @@
 		<result column="del_flag" property="delFlag" jdbcType="CHAR" />
 	</resultMap>
 	<sql id="Base_Column_List">
-		housing_id, housing_no, estate_name, building_name, unit_name, total_price,
+		housing_id, housing_no, estate_name, building_name,
+		unit_name, total_price,
 		gmt_create,
 		gmt_modified, del_flag
 	</sql>
 	
-	<select id="getById" resultMap="BaseResultMap"
-		parameterType="java.lang.Integer">
+	<!-- 查询 list -->
+	<select id="queryList" parameterType="Map" resultMap="BaseResultMap">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM
+		housing
+		<where>
+			del_flag = 'N'
+			<if test="housingId != null">
+  		  		<![CDATA[
+    				AND housing_id = #{housingId,jdbcType=INTEGER}
+    			]]>
+			</if>
+
+			<if test="housingNo != null">
+  		  		<![CDATA[
+    				AND housing_no = #{housingNo,jdbcType=VARCHAR}
+    			]]>
+			</if>
+
+		</where>
+	</select>
+
+	<select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
 		select
 		<include refid="Base_Column_List" />
 		from housing
-		where housing_id = #{housingId,jdbcType=INTEGER}
+		where del_flag='N' and housing_id = #{housingId,jdbcType=INTEGER}
 	</select>
-	
+
+
+	<!-- 逻辑删除 -->
 	<delete id="deleteById" parameterType="java.lang.Integer">
-		delete from housing
-		where housing_id = #{housingId,jdbcType=INTEGER}
+		UPDATE housing
+		<set>
+			gmt_modified = now(),
+			del_flag='Y'
+		</set>
+		<where>
+			housing_id = #{housingId,jdbcType=INTEGER}
+		</where>
 	</delete>
-	
-	<insert id="insert" parameterType="com.lxd.housing.model.housing">
-		insert into housing (housing_id, housing_no, estate_name,
-		building_name, unit_name, total_price,
-		gmt_create, gmt_modified, del_flag
+
+	<insert id="create" parameterType="com.lxd.housing.model.Housing">
+		insert into housing
+		(housing_no, estate_name,
+		building_name, unit_name,
+		total_price,gmt_modified
 		)
-		values (#{housingId,jdbcType=INTEGER}, #{housingNo,jdbcType=VARCHAR},
+		values (#{housingNo,jdbcType=VARCHAR},
 		#{estateName,jdbcType=VARCHAR},
-		#{buildingName,jdbcType=VARCHAR}, #{unitName,jdbcType=VARCHAR}, #{totalPrice,jdbcType=DECIMAL},
-		#{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP},
-		#{delFlag,jdbcType=CHAR}
+		#{buildingName,jdbcType=VARCHAR},
+		#{unitName,jdbcType=VARCHAR}, #{totalPrice,jdbcType=DECIMAL},
+		now()
 		)
 	</insert>
-	
-	<update id="update" parameterType="com.lxd.housing.model.housing">
+
+	<update id="update" parameterType="com.lxd.housing.model.Housing">
 		update housing
 		<set>
+			gmt_modified = now(),
 			<if test="housingNo != null">
 				housing_no = #{housingNo,jdbcType=VARCHAR},
 			</if>
@@ -63,17 +96,10 @@
 			<if test="totalPrice != null">
 				total_price = #{totalPrice,jdbcType=DECIMAL},
 			</if>
-			<if test="gmtCreate != null">
-				gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
-			</if>
-			<if test="gmtModified != null">
-				gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
-			</if>
-			<if test="delFlag != null">
-				del_flag = #{delFlag,jdbcType=CHAR},
-			</if>
 		</set>
-		where housing_id = #{housingId,jdbcType=INTEGER}
+		<where>
+			housing_id = #{housingId,jdbcType=INTEGER}
+		</where>
 	</update>
-	
+
 </mapper>

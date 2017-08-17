@@ -8,7 +8,7 @@
 	<packaging>pom</packaging>
 	<modules>
 
-		<!-- 服务治理中心 7100 -->
+		<!-- 服务发现与注册中心 7100 -->
 		<module>eureka-server</module>
 
 		<!-- 配置中心 7200 -->

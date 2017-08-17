@@ -1,8 +1,8 @@
-package com.lxd.housing.model;
+package com.lxd.housing.dto;
 
 import java.util.Date;
 
-public class Housing {
+public class HousingDto {
 	private Integer housingId;
 
 	private String housingNo;
@@ -92,12 +92,4 @@ public class Housing {
 	public void setDelFlag(String delFlag) {
 		this.delFlag = delFlag == null ? null : delFlag.trim();
 	}
-
-	@Override
-	public String toString() {
-		return "Housing [housingId=" + housingId + ", housingNo=" + housingNo + ", estateName=" + estateName
-				+ ", buildingName=" + buildingName + ", unitName=" + unitName + ", totalPrice=" + totalPrice
-				+ ", gmtCreate=" + gmtCreate + ", gmtModified=" + gmtModified + ", delFlag=" + delFlag + "]";
-	}
-	
 }
