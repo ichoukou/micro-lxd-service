@@ -1,16 +1,30 @@
 package com.lxd.housing.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.lxd.housing.service.HousingService;
 
 @Controller
 @RequestMapping("housing")
 public class HousingController {
 
-	// private Logger logger =
+	private static final Logger logger = LoggerFactory.getLogger(HousingController.class);
+	
+    @Autowired
+    HousingService housingService;
+	
+    @RequestMapping("/hello/{name}")
+    public String index(@PathVariable("name") String name) {
+        return housingService.hello(name);
+    }
 
 	@RequestMapping(value = "/init", method = RequestMethod.GET)
 	public ModelAndView hello() {

@@ -53,6 +53,8 @@ public class HousingController {
 
 		// 构建返回
 		ResultData<HousingDto> resultData = new ResultData<>();
+		
+		logger.info("laile"+housingId);
 
 		try {
 

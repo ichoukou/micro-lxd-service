@@ -11,6 +11,8 @@
 
 	<artifactId>service-housing</artifactId>
 	<packaging>jar</packaging>
+	
+	<version>0.0.2-SNAPSHOT</version>
 
 	<name>spring-cloud-producer</name>
 	<description>Demo project for Spring cloud producer</description>
@@ -33,4 +35,5 @@
 
 
 
+	
 </project>

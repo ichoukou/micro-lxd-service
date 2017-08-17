@@ -8,9 +8,11 @@ server:
 eureka:
   instance:
     hostname: localhost
+  server:
+    enable-self-preservation: false  
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false #代表不向注册中心注册自己。
+    fetch-registry: false #它并不需要去检索服务
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   
