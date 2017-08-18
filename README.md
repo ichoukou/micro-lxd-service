@@ -30,7 +30,8 @@ spring-cloud 微服务组件demo
 </tr>
   
 
-<tr>1、list copy； 2、eureka 红色告警; 3、mybatis官网看看;4、分布式启动；5、负载均衡测试；6、注册中心高可用命令启动</tr>
+<tr>1、list copy； 2、eureka 红色告警; 3、mybatis官网看看;4、分布式启动；5、负载均衡测试；6、注册中心高可用命令启动;
+7、微服务架构事务怎么控制</tr>
 
 
 </tbody></table>
