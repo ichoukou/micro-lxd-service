@@ -10,6 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @MapperScan("com.lxd.housing.dao.*Mapper")
 public class HousingApplication {
 
+    
 	public static void main(String[] args) {
 		SpringApplication.run(HousingApplication.class, args);
 	}

@@ -1,4 +1,4 @@
-package com.lxd.housing.controller;
+package com.lxd.test.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

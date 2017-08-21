@@ -1,4 +1,4 @@
-package com.lxd.housing.service;
+package com.lxd.test.service;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -2,12 +2,17 @@ package com.lxd.housing.controller;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import javax.annotation.Resource;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +33,9 @@ public class HousingController {
 
 	@Resource(name = "housingService")
 	private HousingService housingService;
+
+	@Autowired
+	private DiscoveryClient client;
 
 	@RequestMapping(value = "/q/{param}", method = RequestMethod.GET)
 	public String list(@PathVariable String param) {
@@ -51,10 +59,23 @@ public class HousingController {
 	@RequestMapping(value = "/{housingId}", method = RequestMethod.GET)
 	public String getById(@PathVariable Integer housingId) {
 
+		long start = System.currentTimeMillis();
+
 		// 构建返回
 		ResultData<HousingDto> resultData = new ResultData<>();
-		
-		logger.info("laile"+housingId);
+
+		logger.info("laile" + housingId);
+
+		ServiceInstance instance = client.getLocalServiceInstance();
+		// 让处理线程等待几秒钟
+		int sleepTime = new Random().nextInt(3000);
+		logger.info("sleepTime:" + sleepTime);
+		try {
+			Thread.sleep(sleepTime);
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+		logger.info("/hello, host:" + instance.getHost() + ", service id:" + instance.getServiceId());
 
 		try {
 
@@ -62,12 +83,10 @@ public class HousingController {
 
 			// Model转换Dto
 			HousingDto dto = new HousingDto();
-			
-			if(null != mo) {
+
+			if (null != mo) {
 				BeanUtils.copyProperties(mo, dto);
 			}
-
-			
 
 			resultData.setReturnData(dto);
 
@@ -77,6 +96,9 @@ public class HousingController {
 
 			resultData.setFail();
 		}
+
+		long end = System.currentTimeMillis();
+		logger.info("Spend time : " + (end - start));
 
 		return resultData.toString();
 
