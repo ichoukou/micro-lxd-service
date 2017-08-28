@@ -10,9 +10,20 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class LoginController {
 
+	@RequestMapping(value = "/")
+	public ModelAndView index() {
+
+		// 构建ModelAndView实例，并设置跳转页面
+		ModelAndView mv = new ModelAndView("index");
+		
+		mv.addObject("name", "lxd");
+
+		return mv;
+	}
 
 	/**
 	 * 登录
+	 * 
 	 * @param request
 	 * @return
 	 */
@@ -20,22 +31,22 @@ public class LoginController {
 	public String login(HttpServletRequest request) {
 		return null;
 	}
-	
+
 	/**
-     * 退出
-     * @param request
-     * @return
-     * @throws Exception
-     */
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public ModelAndView logout()
-    {
-        
-        //构建ModelAndView实例，并设置跳转页面
-        ModelAndView mv = new ModelAndView("redirect:/index.jsp");
-        
-        return mv;
-        
-    }
+	 * 退出
+	 * 
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public ModelAndView logout() {
+
+		// 构建ModelAndView实例，并设置跳转页面
+		ModelAndView mv = new ModelAndView("redirect:/index.jsp");
+
+		return mv;
+
+	}
 
 }
