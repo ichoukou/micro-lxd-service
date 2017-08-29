@@ -1,4 +1,4 @@
-package cn.com.eju.deal.base.controller;
+package com.lxd.base.controller;
 
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -7,10 +7,11 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import cn.com.eju.deal.base.model.PageInfo;
-import cn.com.eju.deal.core.support.ReturnView;
-import cn.com.eju.deal.core.util.JsonUtil;
-import cn.com.eju.deal.core.util.StringUtil;
+import org.springframework.util.StringUtils;
+
+import com.lxd.core.support.ReturnView;
+import com.lxd.core.util.JsonUtil;
+
 
 /**   
 * Controller 基类
@@ -19,18 +20,18 @@ import cn.com.eju.deal.core.util.StringUtil;
 */
 public abstract class BaseController
 {
-    public PageInfo pageInfo;
-    
-    public PageInfo getPageInfo(HttpServletRequest request)
-    {
-        pageInfo = new PageInfo(request);
-        return pageInfo;
-    }
-    
-    public void setPageInfo(PageInfo pageInfo)
-    {
-        this.pageInfo = pageInfo;
-    }
+//    public PageInfo pageInfo;
+//    
+//    public PageInfo getPageInfo(HttpServletRequest request)
+//    {
+//        pageInfo = new PageInfo(request);
+//        return pageInfo;
+//    }
+//    
+//    public void setPageInfo(PageInfo pageInfo)
+//    {
+//        this.pageInfo = pageInfo;
+//    }
     
     public ReturnView<?, ?> getMapView(Map<?, ?> map)
     {
@@ -82,7 +83,7 @@ public abstract class BaseController
             {
                 if ("orderBy".equals(key))
                 {
-                    if (!StringUtil.isEmpty(val))
+                    if (!StringUtils.isEmpty(val))
                     {
                         Object orderByList = JsonUtil.parseToObject(val, List.class);
                         map.put(key, orderByList);
