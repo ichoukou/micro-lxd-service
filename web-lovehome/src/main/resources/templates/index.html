@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:include="login/login :: loginHead">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<script type="text/javascript" src="static/js/login/login.js?_v=${vs}"></script>
 </head>
 
-<body>
+<body th:include="login/login :: loginBody">
 
-<input type="text" name="name" value="James Carrot" th:value="${name}"/>
-
-	<table id="usersTable">
-	
-		<tr>
-			<td class="username" th:text="${name}">Jeremy Grapefruit</td>
-			<td class="usertype">Normal User</td>
-		</tr>
-		<tr>
-			<td class="username">Alice Watermelon</td>
-			<td class="usertype">Administrator</td>
-		</tr>
-	</table>
-
-	<div th:include="common/footer :: copyright"></div>
 
 </body>
 

@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="loginHead">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>login html</title>
+<script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/jquery/jquery.form.js}"></script>
+<script type="text/javascript" th:src="@{/dialog/lhgdialog.min.js}"></script>
 
-<script type="text/javascript" src="static/js/login/login.js?_v=${vs}"></script>
+<script type="text/javascript" th:src="@{/js/common/comm.js}"></script>
+<script type="text/javascript" th:src="@{/js/common/validation.js}"></script>
+<script type="text/javascript" th:src="@{/js/login/login.js}"></script>
 </head>
 
-  <body>
-    <table id="usersTable">
-      <tr>
-        <td class="username">Jeremy Grapefruit</td>
-        <td class="usertype">Normal User</td>
-      </tr>
-      <tr>
-        <td class="username">Alice Watermelon</td>
-        <td class="usertype">Administrator</td>
-      </tr>
-    </table>
-  </body>
+<body th:fragment="loginBody">
+
+	<form id="loginForm">
+
+		<div class="group-input">
+			<input class="form-control" placeholder="用户名" type="text"
+				id="username" name="username">
+		</div>
+		<div class="group-input">
+			<input class="form-control" placeholder="密码" type="password"
+				id="password" name="password">
+		</div>
+
+
+
+		<div class="group-input">
+			<a href="javascript:login();" class="btn">登录</a>
+		</div>
+
+
+	</form>
+
+	<div th:include="common/footer :: copyright"></div>
+
+</body>
 
 </html>
 
