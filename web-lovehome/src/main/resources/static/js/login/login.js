@@ -17,7 +17,7 @@ function login() {
 
 		httpPost(formId, url, function(data) {
 
-			window.location.href = BASE_PATH + "/bench";
+			window.location.href = "/bench";
 
 		}, function(data) {
 

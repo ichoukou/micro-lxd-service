@@ -33,5 +33,5 @@ spring-cloud 微服务组件demo
 <tr>1、list copy； 2、eureka 红色告警; 3、mybatis官网看看;4、分布式启动；5、负载均衡测试；6、注册中心高可用命令启动;
 7、微服务架构事务怎么控制; 8、OGNL表达式、Spring EL  ; 9、html5（HTML5规范要求⽤户⾃定义属性以data-前缀开头）    ； 10、java Bean、EJB、POJO；11、PO； 12、VO、13、DTO；13、xmls</tr>
 
-
+<tr>阿里云不挂断运行命令 nohup java -jar XXX.jar & </tr>
 </tbody></table>
