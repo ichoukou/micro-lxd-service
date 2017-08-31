@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
 
-<head>
-<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-<title>workbench</title>
+<head th:insert="~{common/jscss :: jscss}">
 </head>
 
-<body>
-    <p th:text="${hello}">Welcome to our grocery store!</p>
+<body class="hold-transition fixed skin-red sidebar-mini">
+<div class="wrapper">
+
+	<!-- 头部 -->
+	<header class="main-header" th:replace="common/header :: header"></header>
+	
+	<!-- 左边栏 -->
+
+
+	<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+	<!-- Main content -->
+	<section class="content">
+	  	<div class="row">
+			<div class="col-xs-12">
+				<div class="box box-danger">
+		            <div class="box-header with-border">
+		            	<h3 class="box-title">首页</h3>
+		            </div>
+		            
+		           
+					
+	            </div>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- /.content-wrapper -->
+
+	<!-- footer -->
+	<!-- 头部 -->
+	<div  th:replace="common/footer :: footer"></div>
+
+</div>
+
+
 </body>
 
 </html>

@@ -478,8 +478,7 @@ function systemLoading(selector, isLock, desc) {
 				var dataLoadingDiv = $(selector + ' > .sys_loading');
 				if (dataLoadingDiv.length <= 0) {
 					dataLoadingDiv = $('<div class="sys_loading"><img src="'
-							+ BASE_PATH
-							+ '/meta/js/common/dialog/skins/icons/loading.gif"><span class="sys_loading_des">'
+							+ '/dialog/skins/icons/loading.gif"><span class="sys_loading_des">'
 							+ (desc ? desc : '加载中请稍候...') + '</span></div>');
 					$(this).addClass('pos_rel').append(dataLoadingDiv);
 				} else {

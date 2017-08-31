@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="loginHead">
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="login">
 <meta charset="UTF-8">
-<title>login html</title>
-<script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}"></script>
-<script type="text/javascript" th:src="@{/jquery/jquery.form.js}"></script>
-<script type="text/javascript" th:src="@{/dialog/lhgdialog.min.js}"></script>
 
-<script type="text/javascript" th:src="@{/js/common/comm.js}"></script>
-<script type="text/javascript" th:src="@{/js/common/validation.js}"></script>
-<script type="text/javascript" th:src="@{/js/login/login.js}"></script>
+<head th:insert="~{common/jscss :: jscss}">
 </head>
 
-<body th:fragment="loginBody">
+<script type="text/javascript" th:src="@{/js/login/login.js}"></script>
+<link rel="stylesheet" type="text/css" media="all" th:href="@{/css/login.css}">
 
-	<form id="loginForm">
 
-		<div class="group-input">
-			<input class="form-control" placeholder="用户名" type="text"
-				id="username" name="username">
+<body>
+<header>
+	<div class="header">
+		<h1>
+			<span class="header-logo-area"></span>
+			<span class="segmentation">|</span>
+			<span class="id"><b>lxdyun</b>个人Web管理系统</span>
+		</h1>
+	</div>
+</header>
+
+<content>
+	<div class="content">
+		<div class="group-inputs">
+			<div class="location-inputs">
+			   <form id="loginForm">
+					<div class="error-text text-left" style="display:none" id="msgTip">用户账号不正确</div>
+					<div class="group-input"><input class="form-control" placeholder="用户名" type="text" id="username" name="username"></div>
+					<div class="group-input"><input class="form-control" placeholder="密码" type="password" id="password" name="password" ></div>
+					
+					<div class="group-input">
+						<a href="javascript:Login.login();" class="btn">登录</a>
+						<!-- <a href="javascript:Login.showLookPwd();" class="forget-password">忘记密码?</a> -->
+					</div>
+				</form>
+			</div>
 		</div>
-		<div class="group-input">
-			<input class="form-control" placeholder="密码" type="password"
-				id="password" name="password">
-		</div>
+	</div>
+</content>
 
+<footer>
+	<div class="footer">
+		<a href="javascript:;">Copyright © 2017 lxdyun.com 版权所有 沪ICP备1701339号-1</a>
+	</div>
+</footer>
 
-
-		<div class="group-input">
-			<a href="javascript:login();" class="btn">登录</a>
-		</div>
-
-
-	</form>
-
-	<div th:include="common/footer :: copyright"></div>
 
 </body>
 

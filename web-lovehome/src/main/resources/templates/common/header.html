@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+
+
+
+<header class="main-header" th:fragment="herder">
+	<!-- Logo -->
+	<a href="/bench" class="logo" style="width: 255px;"> 
+		
+		<span class="logo-mini"><b>OP</b></span> 
+		<span class="logo-lg">
+			<span style="font-size:16px;">lxdyun个人Web管理系统</span>
+		</span>
+	</a>
+	
+	
+	<!-- Header Navbar: style can be found in header.less -->
+	<nav class="navbar navbar-static-top">
+		<!-- Sidebar toggle button-->
+		<!-- <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+		<span class="sr-only">Toggle navigation</span>
+	  </a> -->
+
+		<ul class="nav navbar-nav">
+
+			<!-- 岗位list循环 -->
+
+				<!-- 用户选中岗位Id匹配 -->
+
+					<!-- 权限信息-菜单 -->
+
+						<!-- 循环出一级 -->
+							<li><a href="#"><b>商品管理</b></a>
+								<ul class="nav-subset1">
+									<!-- 循环出该一级菜单下的  二级菜单-->
+									<li>
+										<a href="#">商品列表</a>
+										<!-- <ul class="nav-subset2">
+											循环获取该二级菜单的 三级菜单
+											<li><a href="${ctx}${listThird.url}">${listThird.authName}</a></li>
+										</ul> -->
+									</li>
+								</ul>
+							</li>
+							<li><a href="#"><b>订单管理</b></a>
+								<ul class="nav-subset1">
+									<!-- 循环出该一级菜单下的  二级菜单-->
+									<li>
+										<a href="#">订单列表</a>
+										<!-- <ul class="nav-subset2">
+											循环获取该二级菜单的 三级菜单
+											<li><a href="${ctx}${listThird.url}">${listThird.authName}</a></li>
+										</ul> -->
+									</li>
+								</ul>
+							</li>
+							<li><a href="#"><b>博客专区</b></a>
+								<ul class="nav-subset1">
+									<!-- 循环出该一级菜单下的  二级菜单-->
+									<li>
+										<a href="#">博客列表</a>
+										<!-- <ul class="nav-subset2">
+											循环获取该二级菜单的 三级菜单
+											<li><a href="${ctx}${listThird.url}">${listThird.authName}</a></li>
+										</ul> -->
+									</li>
+								</ul>
+							</li>
+
+					<!-- 权限信息-菜单 -->
+				<!-- 用户选中岗位Id匹配 -->
+			<!-- 岗位list循环 -->
+
+		</ul>
+
+
+		<div class="navbar-custom-menu">
+			<ul class="nav navbar-nav">
+			
+			   <!-- 提醒消息 -->
+			   <li class="dropdown messages-menu">
+	              <a href="#">
+	                  <i class="fa fa-bell-o"></i>
+	                  <span class="label bg-orange">4</span>
+	              </a>
+	           </li>
+			
+				<!-- User Account: style can be found in dropdown.less -->
+				<li class="dropdown user user-menu"><a href="#"> <span
+						class="hidden-xs">李晓东</span>
+				</a></li>
+				<!-- Control Sidebar Toggle Button -->
+				<li><a href="/logout">退出</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+</header>
+
+
+<script>
+<!--
+	var navSelectId = '${param.navSelectId}';
+//-->
+</script>
+
+
+
+
+</html>

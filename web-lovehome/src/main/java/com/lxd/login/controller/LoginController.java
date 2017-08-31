@@ -118,7 +118,7 @@ public class LoginController extends BaseController {
 	public ModelAndView logout() {
 
 		// 构建ModelAndView实例，并设置跳转页面
-		ModelAndView mv = new ModelAndView("redirect:/index.jsp");
+		ModelAndView mv = new ModelAndView("redirect:/");
 
 		return mv;
 

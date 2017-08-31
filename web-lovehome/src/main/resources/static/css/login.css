@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+header,content,footer{
+	display: block;
+}
+body{
+	font: 12px/1.5 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+	color: #333;
+}
+h1,h2,h3,h4,h5,h6,b{
+	font-weight: normal;
+}
+ul,ol,li{
+	list-style: none;
+}
+a{
+	list-style: none;
+	text-decoration: none;
+}
+img{
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+/*chrome 兼容inpu*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+:root .gradient{filter:none;}
+.header{
+	background-color: #E70012;
+}
+.header h1{
+	color: #fff;
+	font-size: 20px;
+	padding-top: 9px;
+    padding-bottom: 9px;
+	padding-left: 18px;
+}
+.header .header-logo-area{
+	font-size: 0;
+	vertical-align: sub;
+}
+.header-logo-area .logo{
+	width: 100px;
+	display: inline-block;
+}
+.header-logo-area .logo img{
+	width:100%;
+	height:100%;
+}
+.header .segmentation{
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 12px;
+	vertical-align: 5px;
+}
+.content{
+	margin-top: 70px;
+	background-image: url(/images/login-bg1920x580.jpg);
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;  
+    -webkit-background-size: 100% 100%;
+    height: 580px;
+}
+.footer{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.footer a{
+	color: #333;
+}
+.form-control {
+    height: 30px;
+    width: 260px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: none;
+    border: 1px solid #dcdee3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    text-indent: 8px;
+    /*-moz-box-shadow: 0px 0px 3px #d4d6da inset;
+    -webkit-box-shadow: 0px 0px 3px #d4d6da inset;
+    box-shadow: 0px 0px 3px #d4d6da inset;*/
+    outline: none;
+}
+.group-inputs{
+	width: 500px;
+	height: auto;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 115px;
+}
+.error-text{
+	color: #f6818a;
+	padding-left: 90px;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+.group-inputs .location-inputs{
+	border-radius: 5px;
+    background-color: #fcfcfc;
+	-moz-box-shadow:0px 0px 10px #999;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0px 0px 10px #999;            /* For Chrome5+, Safari5+ */
+	box-shadow:0px 0px 10px #999; 					 /* For Latest Opera */
+	padding: 30px;
+}       
+.group-input{
+	margin-top: 20px;
+}           
+.validation-code-img {
+    vertical-align: -11px;
+    width: 80px;
+    height: 30px;
+}
+.yanzhengma .form-control{
+	width: 170px;
+}
+.group-input .btn{
+    display: inline-block;
+    width: 170px;
+    background-color: #38bfef;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+}
+.group-input .forget-password{
+	color: #3e91c3;
+    padding-left: 28px;
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1600px) {
+ 	.content{
+		margin-top: 70px;
+		background-image: url(../images/login-bg.jpg);
+		height: 450px;/*480px*/
+	}
+	.group-inputs{
+		width: 420px;
+		padding-top: 85px;
+	}
+	.error-text{
+		padding-left: 50px;
+	}
+	.id{
+		font-size: 16px;
+    	vertical-align: 2px;
+	}
+}
+@media screen and (min-width: 0px) and (max-width: 1366px) {
+ 	.id{
+		font-size: 16px;
+    	vertical-align: 2px;
+	}
+	.content{
+		margin-top: 50px;
+		background-image: url(../images/login-bg.jpg);
+		height: 380px;
+	}
+	.group-inputs{
+		width: 345px;
+		padding-top: 75px;
+	}
+	.group-inputs .location-inputs{
+		padding-bottom: 40px;
+	}
+	.form-control {
+	    height: 30px;
+	    width: 200px;
+	
+	}
+	.group-input{
+		margin-top: 10px;
+	} 
+	.validation-code-img {
+        vertical-align: -11px;
+	    width: 66px;
+	    height: 30px;
+	}
+	.yanzhengma .form-control {
+	    width: 130px;
+	}
+	.group-input .btn {
+        width: 132px;
+	    height: 30px;
+	    line-height: 30px;
+	}
+	.group-input .forget-password {
+	    padding-left: 10px;;
+	}
+	.error-text{
+		padding-left: 43px;
+	}
+}
+
+.shadow{
+	/* position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:0;
+	background-color: rgba(0,0,0,0.3); */
+	/* display: none; */
+	
+}
+.shadow .shadow-dialog{
+	width: 500px;
+    height: auto;
+    /* position: absolute; */
+    /*top: 50%;*/
+    /* left: 50%;
+    margin-top: 220px;
+    margin-left: -250px; */
+	background-color: #fff;
+}
+.shadow .title{
+	height: 30px;
+	line-height: 30px;
+	background-color: #FF0000;
+	padding: 0 3px;
+	font-weight: bold;
+	color: #fff;
+}
+.shadow .shadow-content{
+	padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+}
+.shadow .content-row+.content-row{
+	margin-top: 10px;
+}
+.content-row .btn{
+	display: inline-block;
+    width: 80px;
+    background-color: #38bfef;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 50px;
+}
+.content-row .btn+.btn{
+	margin-left: 20px;
+}
+.shadow .get-verification-code{
+	color: #6094C0;
+	cursor: pointer;
+	padding-left: 5px;
+}
+
+.content-row .btn.close{
+	background-color: #DDDDDD;
+}
+.spinner {
+    text-align: center;
+    line-height: 32px;
+}
+.spinner:before, .spinner:after {
+    content: "\20";
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+}
+.spinner:before {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-color: rgba(0,0,0, 0.5) transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 0px 5px;
+    -webkit-animation: spinner 0.8s linear infinite;
+    -moz-animation: spinner 0.8s linear infinite;
+    -ms-animation: spinner 0.8s linear infinite;
+    animation: spinner 0.8s linear infinite;
+}
+
+.spinner:after {
+    content: attr(data-text);
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: inherit;
+    color: rgba(0,0,0,0.5);
+	display: block;
+	color: rgba(0,0,0, 0.7);
+	margin-top: 20px;
+	font-weight: 500;
+}
+.shadow .spinner{
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+	
+}
+.shadow .form-control{
+  width: 225px;
+}
+.ui_state_tips .ui_lt, .ui_state_tips .ui_rt, .ui_state_tips .ui_lb, .ui_state_tips .ui_rb {
+    width: 0;
+    height: 0;
+}
+
+/*久久*/
+#sys_popmsg{width: 200px;height:auto;position: absolute;z-index:9999;top:20%;left:40%;position: fixed;text-align: center;background-color: #f6fef3;border:2px solid #93cd3f;background: #f6fef3;text-align: left;display: none;}
+#sys_popmsg td.img{padding:10px;padding-left: 50px; width: 44px;height: 44px;background: url("../images/success.png") center center no-repeat;}
+#sys_popmsg td.content{padding-right: 20px;font-weight:bold;  font-size:14px;}
+.sys_loading{position: absolute;    left: 50%!important;
+    top: 40%!important;
+    z-index: 1984;
+    display: block;
+    margin-top: -14px;
+    margin-left: -75px;display:none;}
+.sys_loading img{float: left;width:28px;height:28px;}
+.sys_loading_des{width: auto;height: 21px;font-size: 14px;font-weight: bold;float: left;margin-left: 5px;margin-top: 4px; color:#666;}
+.sys_masklock{position: absolute;left: 0px;top: 0px;width: 100%;height: 100%;overflow: hidden;z-index: 1984;background: #DCE2F1;filter: alpha(opacity = 60);opacity: 0.6;padding: 0px;margin: 0px;display: none;}
+.sysLoadingMinHeight{min-height:40px;}
+
+/* 锁屏 */
+/* .sys_loading{position:absolute;height:32px;opacity:1;width:32px;z-index:1;background:url(../images/loading.gif) no-repeat 0 0;display:block;overflow:hidden;text-indent:100%;white-space:nowrap;-webkit-backface-visibility:hidden;-webkit-animation:loading 1.6s steps(22) infinite;-moz-animation:loading 1.6s steps(22) infinite;-ms-animation:loading 1.6s steps(22) infinite;-o-animation:loading 1.6s steps(22) infinite;animation:loading 1.6s steps(22) infinite;-webkit-transition:opacity .4s ease-in-out .2s;-moz-transition:opacity .4s ease-in-out .2s;-ms-transition:opacity .4s ease-in-out .2s;-o-transition:opacity .4s ease-in-out .2s;transition:opacity .4s ease-in-out .2s;}
+
+.sys_masklock{width:100%;height:100%; background-color: rgba(0,0,0,0.35); opacity:0.8; position:absolute;left:0;top:0;margin:0;padding:0;overflow:hidden;display:none;} */
+.tip{margin-left:10px;line-height:30px;color:#DE1212;}
+.note{color:#999999;line-height:32px;}
+.verifycode{width:80px;height:30px;display:block;float:left;margin:1px 0;}
+.input-code{width:50px;height:30px;display:block;float:left;margin-left:5px;}
+.input-code input{padding:0;}
+.state-code{width:12px;margin-left:10px;}
+.state-code i{line-height:30px;}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+.pull-left{float:left;}
+.pull-right{float:right;}
+.mtip-success{padding:5px 60px 10px 60px;position:fixed;top:56px;left:50%;z-index:99999;background-color:#60aa17;border-radius:0 0 5px 5px;margin-left:-50px;color:#FFF;display:none;}
+.mtip-des{color:#FFF;margin-left:5px;}
+.hide{display:none;}
+.show{display:block;}
+.pos_rel{position:relative;}
+.placeholder{color:#999;}
+/* .sysLoadingMinHeight{min-height:230px;} */
+.sysBtnTip{position:absolute;top:-25px;padding:5px 20px;background-color:#000;opacity:0.7;border-radius:3px;color:#FFF;font-size:12px;display:none;}
+.sysBtnTip .arrow{position:absolute;background:url(../images/mtip-arrow.png) no-repeat;display:inline-block;width:11px;height:6px;bottom:-6px;left:45%;}
+.sysAlert{background-color:white;width:310px;padding:17px;text-align:center;overflow:hidden;}
+.showSweetAlert{-webkit-animation:showSweetAlert 0.3s;-moz-animation:showSweetAlert 0.3s;animation:showSweetAlert 0.3s;}
+.sysAlert .icon{margin:10px auto;position:relative;box-sizing:content-box;}
+.sysAlert h2{color:#575757;text-align:center;font-weight:600;text-transform:none;position:relative;margin:10px auto;font:14px/1.5 "Microsoft YaHei","Arial","STXihei","Helvetica";}
+.sysAlert p{margin:0 auto;}
+.sysAlert .error i{color:#F27474;}
+.sysAlert .warning i{color:#F8BB86;}
+.sysAlert .success i{color:#60aa17;}
+.sysAlert .btn{margin:0 auto;width:168px;}
+.sysAlert span{color:#fa943d;font-weight:bold;}
+.sysAlert i{text-align:center;font-size:60px;}
+.sysAlert a{color:#333;}
+
+.ui_content{
+	padding:0px!important
+}

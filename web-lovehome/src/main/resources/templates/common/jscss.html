@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+
+<head th:fragment="jscss">
+
+<!-- 元信息 -->
+<title>lxdyun Web</title>
+
+<!-- 引入css -->
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" th:href="@{bootstrap/css/bootstrap-theme.min.css}">
+<link rel="stylesheet" type="text/css" th:href="@{bootstrap/css/bootstrap.min.css}">
+
+<!-- Theme style -->
+<link rel="stylesheet" th:href="@{/AdminLTE/2.3.5/css/AdminLTE.min.css}">
+
+<link rel="stylesheet" th:href="@{/css/skins/_all-skins.min.css}">
+
+<link rel="stylesheet" type="text/css" media="all" th:href="@{css/all.min.css}" >
+
+
+<!-- 引入自定义css -->
+<link rel="stylesheet" type="text/css" media="all" th:href="@{css/layout.css}" >
+<link rel="stylesheet" type="text/css" media="all" th:href="@{css/tip.css}" >
+
+
+
+
+
+
+<!-- common js begin  -->
+<script type="text/javascript" th:src="@{/jquery/jquery-3.2.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/jquery/jquery.form.js}"></script>
+<script type="text/javascript" th:src="@{/dialog/lhgdialog.min.js}"></script>
+
+<script type="text/javascript" th:src="@{/js/common/comm.js}"></script>
+<script type="text/javascript" th:src="@{/js/common/validation.js}"></script>
+<!-- common js end  -->
+
+</head>
