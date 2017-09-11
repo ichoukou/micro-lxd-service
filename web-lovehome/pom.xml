@@ -11,6 +11,7 @@
 
 	<artifactId>web-lovehome</artifactId>
 	<packaging>jar</packaging>
+	<version>0.0.3-SNAPSHOT</version>
 
 
 	<name>web-house Maven Webapp</name>

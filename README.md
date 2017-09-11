@@ -34,4 +34,9 @@ spring-cloud 微服务组件demo
 7、微服务架构事务怎么控制; 8、OGNL表达式、Spring EL  ; 9、html5（HTML5规范要求⽤户⾃定义属性以data-前缀开头）    ； 10、java Bean、EJB、POJO；11、PO； 12、VO、13、DTO；13、xmls</tr>
 
 <tr>阿里云不挂断运行命令 nohup java -jar XXX.jar & </tr>
+<tr>1. 查看端口号占用情况：netstat -apn|grep 80  (ESTABLISHED6426/lighttpd)</tr>
+<tr>2. 确定进程号: ps -aux|grep <进程号> </tr>
+<tr>3. 3. 杀掉该进程 : kill -9 <pid></tr>
+
+
 </tbody></table>
