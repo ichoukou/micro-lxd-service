@@ -29,6 +29,8 @@
 		<!-- 客源服务 customer 8300 -->
 		<module>service-customer</module>
 
+        <!-- service-customer-api -->
+		<!-- <module>service-customer-api</module> -->
 
 	</modules>
 

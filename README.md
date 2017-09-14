@@ -38,5 +38,6 @@ spring-cloud 微服务组件demo
 <tr>2. 确定进程号: ps -aux|grep <进程号> </tr>
 <tr>3. 3. 杀掉该进程 : kill -9 <pid></tr>
 
-
+<tr>mvn package</tr>
+<tr>spring boot启动命令：java -jar hello-service-0.0.1-SNAPSHOT.jar --server.port=8081</tr>
 </tbody></table>

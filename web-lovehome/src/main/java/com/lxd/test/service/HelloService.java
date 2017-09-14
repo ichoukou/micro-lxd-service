@@ -1,12 +1,5 @@
 package com.lxd.test.service;
 
-import java.util.concurrent.Future;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.client.RestTemplate;
-
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-
 public class HelloService {
 
 //	@Autowired
