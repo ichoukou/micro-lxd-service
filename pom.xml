@@ -30,7 +30,7 @@
 		<module>service-customer</module>
 
         <!-- service-customer-api -->
-		<!-- <module>service-customer-api</module> -->
+		<module>service-customer-api</module>
 
 	</modules>
 
