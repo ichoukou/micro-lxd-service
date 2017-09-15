@@ -13,7 +13,11 @@ spring-cloud 微服务组件demo
 </tr>
 
 <tr>
-<td>eureka-server</td>  <td>服务发现与注册中心 </td>  <td>7100</td>
+<td>hystrix-dashboard</td>  <td>监控</td>  <td>7300</td>
+</tr>
+
+<tr>
+<td>gateway-api</td>  <td>服务网关 </td>  <td>7500</td>
 </tr>
 
 <tr>

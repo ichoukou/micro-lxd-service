@@ -19,6 +19,9 @@
 
 		<!-- turbine 7400 -->
 		<module>turbine</module>
+		
+		<!-- gateway-api 7500 -->
+		<module>gateway-api</module>
 
 		<!-- 房Web lovehome 8100 -->
 		<module>web-lovehome</module>
