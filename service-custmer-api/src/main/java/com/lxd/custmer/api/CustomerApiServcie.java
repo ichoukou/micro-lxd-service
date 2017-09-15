@@ -9,19 +9,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.lxd.customer.dao.TestDao;
 
-@FeignClient(name = "service-customer", fallback = CustomerFallbackService.class)
+@RequestMapping("/refactor")
 public interface CustomerServcie {
 
-	@RequestMapping("/customer/hello")
-	String helloCustomer();
 	
-	@RequestMapping(value = "hello1", method = RequestMethod.GET)
+	@RequestMapping(value = "hello4", method = RequestMethod.GET)
 	String hello(@RequestParam("name") String name);
 	
-	@RequestMapping(value = "hello2", method = RequestMethod.GET)
+	@RequestMapping(value = "hello5", method = RequestMethod.GET)
 	TestDao index(@RequestHeader("testId") Integer testId, @RequestHeader("testName") String testName);
 	
-	@RequestMapping(value = "/hello3", method= RequestMethod.POST)
+	@RequestMapping(value = "/hello6", method= RequestMethod.POST)
 	String index(@RequestBody TestDao testDao);
 
 }

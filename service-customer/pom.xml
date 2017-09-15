@@ -15,5 +15,10 @@
 	<name>spring-cloud-consumer</name>
 	<description>Demo project for Spring cloud customer service</description>
 
+	<dependency>
+		<groupid>com.lxd</groupid>
+		<artifactid>hello-service-api</artifactid>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
 
 </project>

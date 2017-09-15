@@ -13,6 +13,8 @@
 
 	<artifactId>service-custmer-api</artifactId>
 	<packaging>jar</packaging>
+	
+	<version>0.0.1-SNAPSHOT</version>
 
 	<name>service-custmer-api</name>
 	<description>Demo project for Spring cloud customer service api</description>
