@@ -3,12 +3,16 @@ spring:
     name: gateway-api
     
 server:
-  port: 7400
+  port: 7500
   
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7100/eureka/
 
-
-
+zuul:
+  routes:
+    service-customer: 
+      path: /api-customer/**
+      service-id: service-customer
+    
