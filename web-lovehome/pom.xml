@@ -36,6 +36,15 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.thrift/libthrift -->
+<dependency>
+    <groupId>org.apache.thrift</groupId>
+    <artifactId>libthrift</artifactId>
+    <version>0.11.0</version>
+    <type>pom</type>
+</dependency>
+		
 
 
 		<!-- devtools可以实现页面热部署（即页面修改后会立即生效，这个可以直接在application.properties文件中配置spring.thymeleaf.cache=false来实现）， 
